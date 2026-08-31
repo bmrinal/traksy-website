@@ -969,6 +969,41 @@ li + li {
   font-weight: 900;
 }
 
+.not-found {
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(114, 223, 104, 0.22), rgba(36, 212, 216, 0.08), rgba(239, 113, 95, 0.12)),
+    var(--midnight);
+}
+
+.not-found img {
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+}
+
+.not-found h1 {
+  font-size: 42px;
+  line-height: 1.05;
+}
+
+.not-found p:not(.eyebrow) {
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.not-found .button {
+  margin-top: 10px;
+}
+
 @media (max-width: 1080px) {
   .phone-mockup {
     right: 40px;

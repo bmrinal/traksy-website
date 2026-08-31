@@ -11,6 +11,14 @@ Static marketing site for the Traksy app.
 
 Open `/Users/mrinalpurohit/tracksy/website/index.html` in a browser.
 
+## Cloudflare Workers
+
+Use these settings for the Cloudflare screen that deploys with Wrangler:
+
+- Build command: leave blank.
+- Deploy command: `npx wrangler deploy`.
+- Root directory: leave blank when this repository is connected directly.
+
 ## Notes
 
 - The logo in `assets/traksy-icon.png` comes from `/Users/mrinalpurohit/Downloads/traksy-icon.png`.
