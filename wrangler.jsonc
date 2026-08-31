@@ -3,6 +3,16 @@
   "name": "traksy-website",
   "compatibility_date": "2026-08-31",
   "main": "src/worker.js",
+  "routes": [
+    {
+      "pattern": "traksy.app",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.traksy.app",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": "./",
     "binding": "ASSETS"
