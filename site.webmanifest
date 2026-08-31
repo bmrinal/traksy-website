@@ -1,0 +1,20 @@
+{
+  "name": "Traksy",
+  "short_name": "Traksy",
+  "description": "Receipt intelligence for small business operators.",
+  "icons": [
+    {
+      "src": "assets/favicon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/traksy-icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#010e3b",
+  "background_color": "#fbfcfd",
+  "display": "standalone"
+}

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy | Traksy</title>
+    <meta
+      name="description"
+      content="Privacy policy for Traksy, including receipt photos, item records, staff records, organization data, and service providers."
+    />
+    <meta name="theme-color" content="#010e3b" />
+    <link rel="icon" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/traksy-icon.png" />
+    <link rel="manifest" href="../site.webmanifest" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="legal-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="../" aria-label="Traksy home">
+          <img src="../assets/traksy-icon.png" alt="" />
+          <span>Traksy</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" data-menu>
+          <div class="nav-center">
+            <a href="../#workflow">Workflow</a>
+            <a href="../#features">Features</a>
+            <a href="../#operations">Operations</a>
+          </div>
+          <div class="nav-actions">
+            <a class="nav-plain" aria-current="page" href="./">Privacy</a>
+            <a class="nav-cta" href="mailto:hello@tracksy.app?subject=Traksy%20access">Request access</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="legal-hero">
+        <div class="container legal-hero-grid">
+          <div>
+            <p class="eyebrow">Privacy policy</p>
+            <h1>How Traksy handles business records.</h1>
+            <p>
+              This policy explains the information Traksy collects, how it is used, and how receipt photos, item data,
+              team data, staff records, locations, costs, and shopping lists are handled.
+            </p>
+          </div>
+          <div class="legal-summary" aria-label="Policy summary">
+            <span>Last updated</span>
+            <strong>August 31, 2026</strong>
+            <p>Questions: <a href="mailto:privacy@tracksy.app">privacy@tracksy.app</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="legal-body">
+        <div class="container legal-layout">
+          <aside class="legal-nav" aria-label="Privacy policy sections">
+            <a href="#overview">Overview</a>
+            <a href="#information">Information collected</a>
+            <a href="#use">How information is used</a>
+            <a href="#providers">Service providers</a>
+            <a href="#storage">Storage and retention</a>
+            <a href="#sharing">Sharing</a>
+            <a href="#choices">Choices and rights</a>
+            <a href="#security">Security</a>
+            <a href="#contact">Contact</a>
+          </aside>
+
+          <article class="legal-copy">
+            <section id="overview">
+              <h2>1. Overview</h2>
+              <p>
+                Traksy helps organizations capture purchase receipts, review item-level details, understand spending,
+                estimate inventory patterns, manage shopping lists, record fixed costs, and maintain staff and team
+                information. Information is organized by organization and, when selected, by business location.
+              </p>
+            </section>
+
+            <section id="information">
+              <h2>2. Information collected</h2>
+              <p>Depending on how Traksy is used, the app may collect or create:</p>
+              <ul>
+                <li>Account identifiers such as phone number, email address, authentication user ID, and one-time-code login metadata.</li>
+                <li>Profile and organization details such as name, business name, membership status, role, invitations, and default location.</li>
+                <li>Location details such as location name and optional address.</li>
+                <li>Receipt data such as receipt photos, vendor, vendor domain, purchase date, payment method, item names, quantities, categories, prices, totals, and timestamps.</li>
+                <li>Operational records such as shopping list items, fixed costs, staff names, contact details, employment type, pay type, pay rate, status, and settlement details.</li>
+                <li>Technical records such as API requests, diagnostic logs, authentication events, and raw AI parsing responses used for debugging and reliability.</li>
+              </ul>
+            </section>
+
+            <section id="use">
+              <h2>3. How information is used</h2>
+              <p>Traksy uses information to:</p>
+              <ul>
+                <li>Authenticate users through passwordless phone or email sign-in.</li>
+                <li>Create and manage organizations, locations, memberships, roles, and invitations.</li>
+                <li>Extract receipt details from photos and let users review, edit, save, and filter receipt records.</li>
+                <li>Generate item, category, and date-range reports for owners and admins.</li>
+                <li>Estimate inventory signals through StockIQ based on repeat purchase patterns and normalized product names.</li>
+                <li>Maintain shopping lists, fixed costs, staff records, staff cost history, and organization settings.</li>
+                <li>Monitor, secure, debug, and improve the app and backend services.</li>
+              </ul>
+            </section>
+
+            <section id="providers">
+              <h2>4. Service providers</h2>
+              <p>
+                Traksy relies on trusted infrastructure and service providers to operate the app. Authentication is
+                handled through Auth0. Backend services use AWS infrastructure, including API Gateway, Lambda, DynamoDB,
+                S3, and CloudWatch. Receipt photos and some item names may be processed by OpenAI services to extract
+                receipt fields, infer categories, and normalize inventory item names.
+              </p>
+              <p>
+                These providers process information only as needed to provide the app, maintain security, troubleshoot
+                issues, or comply with legal obligations.
+              </p>
+            </section>
+
+            <section id="storage">
+              <h2>5. Storage and retention</h2>
+              <p>
+                Receipt photos are stored in private cloud storage. Unconfirmed temporary receipt scans are configured to
+                expire after one day. When a user confirms and saves a receipt, the receipt image may be copied into
+                permanent receipt storage and retained with the receipt record unless it is deleted or the organization
+                requests removal.
+              </p>
+              <p>
+                Organization records, receipt records, items, staff data, fixed costs, categories, memberships, and
+                shopping lists are retained while they are needed to provide Traksy or meet operational, security, and
+                legal requirements. Older shopping list rows may be pruned after the app's short history window.
+              </p>
+            </section>
+
+            <section id="sharing">
+              <h2>6. Sharing</h2>
+              <p>
+                Traksy does not sell personal information. Information may be visible to authorized users inside the same
+                organization according to their role and location scope. Owners and admins may have access to broader
+                reporting, team, category, staff, fixed-cost, and location settings than members.
+              </p>
+              <p>
+                Information may also be shared with service providers, legal authorities, or professional advisors when
+                necessary to provide the app, protect rights and safety, investigate abuse, comply with law, or complete a
+                business transfer.
+              </p>
+            </section>
+
+            <section id="choices">
+              <h2>7. Choices and rights</h2>
+              <p>
+                Users can edit many records directly in the app, including receipt details, categories, locations, team
+                member names, staff records, and fixed costs, depending on role permissions. Users or organization owners
+                may request access, correction, export, or deletion of information by contacting Traksy.
+              </p>
+              <p>
+                Some information may need to be retained for security, troubleshooting, accounting, backup, legal, or
+                legitimate business reasons.
+              </p>
+            </section>
+
+            <section id="security">
+              <h2>8. Security</h2>
+              <p>
+                Traksy uses passwordless authentication, token-protected API access, private receipt-image storage,
+                server-side receipt processing, encrypted cloud storage configuration, and role-based access patterns.
+                No system is perfectly secure, so users should protect access to their devices, email accounts, and phone
+                numbers used for one-time-code login.
+              </p>
+            </section>
+
+            <section id="children">
+              <h2>9. Children</h2>
+              <p>
+                Traksy is intended for business use and is not directed to children. If you believe a child has provided
+                information to Traksy, contact us so the issue can be reviewed.
+              </p>
+            </section>
+
+            <section id="changes">
+              <h2>10. Changes</h2>
+              <p>
+                Traksy may update this policy as the app, providers, or legal requirements change. The updated date at the
+                top of the page shows when the policy was last revised.
+              </p>
+            </section>
+
+            <section id="contact">
+              <h2>11. Contact</h2>
+              <p>
+                For privacy questions or requests, contact <a href="mailto:privacy@tracksy.app">privacy@tracksy.app</a>.
+              </p>
+            </section>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand footer-brand" href="../" aria-label="Traksy home">
+          <img src="../assets/traksy-icon.png" alt="" />
+          <span>Traksy</span>
+        </a>
+        <div class="footer-links">
+          <a href="../#workflow">Workflow</a>
+          <a href="../#features">Features</a>
+          <a href="./">Privacy Policy</a>
+        </div>
+        <p>Copyright <span data-year>2026</span> Traksy. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
