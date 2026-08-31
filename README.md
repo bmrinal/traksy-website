@@ -18,6 +18,7 @@ Use these settings for the Cloudflare screen that deploys with Wrangler:
 - Build command: leave blank.
 - Deploy command: `npx wrangler deploy`.
 - Root directory: leave blank when this repository is connected directly.
+- The Wrangler config routes `traksy.app/*` and `www.traksy.app/*` to the Worker.
 
 ## Notes
 

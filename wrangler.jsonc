@@ -5,12 +5,12 @@
   "main": "src/worker.js",
   "routes": [
     {
-      "pattern": "traksy.app",
-      "custom_domain": true
+      "pattern": "traksy.app/*",
+      "zone_name": "traksy.app"
     },
     {
-      "pattern": "www.traksy.app",
-      "custom_domain": true
+      "pattern": "www.traksy.app/*",
+      "zone_name": "traksy.app"
     }
   ],
   "assets": {
