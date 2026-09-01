@@ -122,10 +122,50 @@ li + li {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  min-width: 130px;
+  gap: 11px;
+  min-width: 118px;
   font-weight: 100;
   color: var(--ink);
+}
+
+.brand-mark {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  flex: 0 0 30px;
+  place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--mint), var(--cyan));
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1;
+  box-shadow:
+    0 8px 18px rgba(35, 204, 197, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.38);
+  overflow: hidden;
+}
+
+.brand-mark::before,
+.brand-mark::after {
+  position: absolute;
+  content: "";
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.brand-mark::before {
+  top: 8px;
+  left: 6px;
+  width: 18px;
+  height: 3px;
+}
+
+.brand-mark::after {
+  top: 8px;
+  left: 13px;
+  width: 4px;
+  height: 16px;
 }
 
 .brand img {
