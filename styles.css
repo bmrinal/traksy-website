@@ -1034,11 +1034,13 @@ li + li {
 
 @media (max-width: 860px) {
   .site-header {
-    inset: 10px 0 auto;
+    inset: 12px 0 auto;
   }
 
   .nav-shell {
     width: min(100% - 20px, var(--max));
+    min-height: 58px;
+    padding: 8px 10px;
     grid-template-columns: auto auto;
     justify-content: space-between;
     position: relative;
@@ -1083,8 +1085,12 @@ li + li {
   }
 
   .hero {
-    min-height: calc(100svh - 58px);
-    padding: 94px 0 42px;
+    min-height: auto;
+    padding: 112px 0 48px;
+  }
+
+  .hero::after {
+    height: 34px;
   }
 
   .hero-content {
@@ -1093,12 +1099,19 @@ li + li {
   }
 
   .hero h1 {
-    font-size: 54px;
+    font-size: 50px;
+    line-height: 1;
   }
 
   .hero-copy {
     max-width: 560px;
     font-size: 18px;
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+    gap: 10px;
   }
 
   .phone-mockup {
@@ -1180,18 +1193,21 @@ li + li {
   }
 
   .hero {
-    padding-top: 88px;
+    padding-top: 106px;
+    padding-bottom: 38px;
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 42px;
   }
 
   .hero-copy {
-    font-size: 17px;
+    margin-top: 16px;
+    font-size: 16px;
   }
 
   .button {
+    min-height: 48px;
     width: 100%;
   }
 
