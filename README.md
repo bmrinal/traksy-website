@@ -6,6 +6,7 @@ Static marketing site for the Traksy app.
 
 - `index.html`: Product homepage.
 - `privacy/index.html`: Dedicated privacy policy page.
+- `support/index.html`: Support page - sign-in, receipts, team/locations, reports, troubleshooting, contact.
 
 ## Local Preview
 
