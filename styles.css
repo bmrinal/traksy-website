@@ -879,6 +879,24 @@ li + li {
   white-space: nowrap;
 }
 
+.app-store-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.app-store-badge img,
+.access-panel .app-store-badge img {
+  width: auto;
+  height: 50px;
+  border-radius: 0;
+}
+
+.app-store-badge:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
 .site-footer {
   background: #071329;
   color: var(--white);
