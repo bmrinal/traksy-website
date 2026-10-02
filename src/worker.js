@@ -2,8 +2,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === "/privacy") {
-      url.pathname = "/privacy/";
+    if (url.pathname === "/privacy" || url.pathname === "/terms") {
+      url.pathname = `${url.pathname}/`;
       return Response.redirect(url.toString(), 308);
     }
 
