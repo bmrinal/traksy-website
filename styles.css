@@ -269,9 +269,8 @@ li + li {
 
 .hero {
   position: relative;
-  min-height: calc(100svh - 72px);
   overflow: hidden;
-  padding: 116px 0 56px;
+  padding: 116px 0 88px;
   background:
     linear-gradient(135deg, rgba(114, 223, 104, 0.26), rgba(36, 212, 216, 0.1) 34%, rgba(239, 113, 95, 0.1) 100%),
     var(--midnight);
@@ -287,9 +286,16 @@ li + li {
   pointer-events: none;
 }
 
+/* The phone and both cards are one fixed-size composition beside the
+   text, so they keep their arrangement at any window size - positioning
+   them against the whole (screen-tall) hero let them drift apart on big
+   monitors and collide on short ones. */
 .hero-stage {
   position: absolute;
-  inset: 0;
+  top: 116px;
+  right: max(20px, calc((100vw - var(--max)) / 2));
+  width: 560px;
+  height: 560px;
   z-index: 0;
   pointer-events: none;
 }
@@ -308,9 +314,10 @@ li + li {
 }
 
 .scan-card {
-  right: max(260px, calc((100vw - var(--max)) / 2 + 260px));
-  bottom: 118px;
-  width: 266px;
+  left: 0;
+  top: 228px;
+  z-index: 1;
+  width: 250px;
   padding: 18px;
 }
 
@@ -351,9 +358,10 @@ li + li {
 }
 
 .ops-card {
-  right: max(26px, calc((100vw - var(--max)) / 2));
-  bottom: 74px;
-  width: 210px;
+  right: 0;
+  top: 404px;
+  z-index: 1;
+  width: 200px;
   padding: 18px;
 }
 
@@ -386,8 +394,8 @@ li + li {
 }
 
 .phone-mockup {
-  right: max(112px, calc((100vw - var(--max)) / 2 + 96px));
-  top: 214px;
+  right: 64px;
+  top: 0;
   width: 252px;
   height: 430px;
   border-radius: 34px;
@@ -496,7 +504,8 @@ li + li {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 560px;
+  min-height: 560px;
   margin-left: max(20px, calc((100vw - var(--max)) / 2));
 }
 
@@ -1053,19 +1062,24 @@ li + li {
   margin-top: 10px;
 }
 
-@media (max-width: 1080px) {
-  .phone-mockup {
-    right: 40px;
-    top: 246px;
+/* Too narrow for text and the full composition side by side: keep just
+   the phone. */
+@media (max-width: 1180px) {
+  .hero-stage {
+    width: 320px;
   }
 
-  .scan-card {
-    right: 274px;
+  .hero-content {
+    max-width: calc(100% - 400px);
   }
 
+  .scan-card,
   .ops-card {
-    right: 22px;
+    display: none;
   }
+}
+
+@media (max-width: 1080px) {
 
   .capability-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1154,16 +1168,13 @@ li + li {
     gap: 10px;
   }
 
-  .phone-mockup {
+  .hero-stage {
     display: none;
   }
 
-  .scan-card {
-    display: none;
-  }
-
-  .ops-card {
-    display: none;
+  .hero-content {
+    max-width: none;
+    min-height: 0;
   }
 
   .intro-grid,
