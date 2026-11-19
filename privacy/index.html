@@ -59,7 +59,7 @@
           </div>
           <div class="legal-summary" aria-label="Policy summary">
             <span>Last updated</span>
-            <strong>October 1, 2026</strong>
+            <strong>November 19, 2026</strong>
             <p>Questions: <a href="mailto:privacy@traksy.app">privacy@traksy.app</a></p>
           </div>
         </div>
@@ -121,8 +121,16 @@
               <p>
                 Traksy relies on trusted infrastructure and service providers to operate the app. Authentication is
                 handled through Auth0. Backend services use AWS infrastructure, including API Gateway, Lambda, DynamoDB,
-                S3, and CloudWatch. Receipt photos and some item names may be processed by OpenAI services to extract
-                receipt fields, infer categories, and normalize inventory item names.
+                S3, and CloudWatch. Receipt photos are read by Amazon Textract, and receipt photos and item names may
+                be processed by Anthropic's Claude models through Amazon Bedrock to extract receipt fields, infer
+                categories, and normalize inventory item names. Amazon Bedrock does not use this content to train
+                models. Emails, such as sign-in codes and API key security notices, are sent through Twilio SendGrid.
+                Push notifications are delivered through Expo and Apple.
+              </p>
+              <p>
+                If an organization owner creates an API key or connects an AI assistant to Traksy, the tools they
+                connect can read that organization's data on the owner's behalf. Those tools are chosen by the owner
+                and handle data under their own terms.
               </p>
               <p>
                 These providers process information only as needed to provide the app, maintain security, troubleshoot
